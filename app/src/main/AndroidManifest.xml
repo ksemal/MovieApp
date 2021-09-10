@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApp">
+        <activity android:name=".presentation.artist.ArtistActivity"></activity>
+        <activity android:name=".presentation.tvshow.TvShowActivity" />
         <activity
             android:name=".presentation.movie.MovieActivity"
-            android:label="@string/title_activity_movie">
-        </activity>
+            android:label="@string/title_activity_movie" />
         <activity android:name=".presentation.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
