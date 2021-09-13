@@ -7,6 +7,7 @@ Movie app allows you:
 
 ### App is using
 * MVVM Clean Architecture:
+
       1. Presentation Layer:
             - View is represented by 3 activities: Movie Activity, TvShow Activity and Artist Activity
             - ViewModel for each activity call corresponding use cases (either get list or update list) and get live data of objects via repository from data source (remote, local or cached)
