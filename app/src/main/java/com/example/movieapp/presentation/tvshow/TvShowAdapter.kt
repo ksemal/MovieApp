@@ -1,4 +1,4 @@
-package com.example.movieapp.presentation.movie
+package com.example.movieapp.presentation.tvshow
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,16 +6,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieapp.R
-import com.example.movieapp.data.model.movie.Movie
+import com.example.movieapp.data.model.tvShow.TvShow
 import com.example.movieapp.databinding.ListItemBinding
 
 
-class MovieAdapter : RecyclerView.Adapter<MyViewHolder>() {
-    private val movieList = ArrayList<Movie>()
+class TvShowAdapter : RecyclerView.Adapter<MyViewHolder>() {
+    private val tvShowList = ArrayList<TvShow>()
 
-    fun setList(movies: List<Movie>) {
-        movieList.clear()
-        movieList.addAll(movies)
+    fun setList(tvShows: List<TvShow>) {
+        tvShowList.clear()
+        tvShowList.addAll(tvShows)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -30,11 +30,11 @@ class MovieAdapter : RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return movieList.size
+        return tvShowList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(movieList[position])
+        holder.bind(tvShowList[position])
     }
 }
 
@@ -42,10 +42,10 @@ class MovieAdapter : RecyclerView.Adapter<MyViewHolder>() {
 class MyViewHolder(val binding: ListItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(movie: Movie) {
-        binding.titleTextView.text = movie.title
-        binding.descriptionTextView.text = movie.overview
-        val posterURL = "https://image.tmdb.org/t/p/w500" + movie.posterPath
+    fun bind(tvShow: TvShow) {
+        binding.titleTextView.text = tvShow.name
+        binding.descriptionTextView.text = tvShow.overview
+        val posterURL = "https://image.tmdb.org/t/p/w500" + tvShow.posterPath
         Glide.with(binding.imageView.context)
             .load(posterURL)
             .into(binding.imageView)
