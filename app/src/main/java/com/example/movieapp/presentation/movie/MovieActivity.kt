@@ -70,14 +70,16 @@ class MovieActivity : AppCompatActivity() {
     }
 
     private fun updateMovies() {
+        binding.movieRecyclerView.visibility = View.GONE
         binding.movieProgressBar.visibility = View.VISIBLE
         val response = movieViewModel.updateMovies()
         response.observe(this, Observer {
             if (it != null) {
                 adapter.setList(it)
                 adapter.notifyDataSetChanged()
+                binding.movieProgressBar.visibility = View.GONE
+                binding.movieRecyclerView.visibility = View.VISIBLE
             }
-            binding.movieProgressBar.visibility = View.GONE
         })
     }
 }

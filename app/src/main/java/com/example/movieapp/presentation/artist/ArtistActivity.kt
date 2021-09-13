@@ -73,14 +73,16 @@ class ArtistActivity : AppCompatActivity() {
     }
 
     private fun updateArtists() {
+        binding.artistRecyclerView.visibility = View.GONE
         binding.artistProgressBar.visibility = View.VISIBLE
         val response = artistViewModel.updateArtists()
         response.observe(this, Observer {
             if (it != null) {
                 adapter.setList(it)
                 adapter.notifyDataSetChanged()
+                binding.artistProgressBar.visibility = View.GONE
+                binding.artistRecyclerView.visibility = View.VISIBLE
             }
-            binding.artistProgressBar.visibility = View.GONE
         })
     }
 }

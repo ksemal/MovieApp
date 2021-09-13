@@ -71,6 +71,7 @@ class TvShowActivity : AppCompatActivity() {
     }
 
     private fun updateTvShows() {
+        binding.tvShowRecyclerView.visibility = View.GONE
         binding.tvShowProgressBar.visibility = View.VISIBLE
         val response = tvShowViewModel.updateTvShows()
         response.observe(this, Observer {
@@ -79,6 +80,7 @@ class TvShowActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
             binding.tvShowProgressBar.visibility = View.GONE
+            binding.tvShowRecyclerView.visibility = View.VISIBLE
         })
     }
 }
