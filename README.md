@@ -33,3 +33,12 @@ Movie app allows you:
 * Dependency Injection with Dagger. Dependency injection is a complex topic to digest and learn especially for beginners.
 
 ### Screenshots
+
+Scroll through list of movies
+
+https://user-images.githubusercontent.com/42688915/133152495-7f0236e6-138c-43bd-a1ee-ff659dab7378.mov
+
+Scroll through and update list of tv shows and artists
+
+https://user-images.githubusercontent.com/42688915/133152623-b3eef6f5-55aa-4585-94ee-0fc17bbb8118.mov
+
