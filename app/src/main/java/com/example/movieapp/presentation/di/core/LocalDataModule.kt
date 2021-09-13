@@ -1,4 +1,4 @@
-package com.example.movieapp.presentation.di
+package com.example.movieapp.presentation.di.core
 
 import com.example.movieapp.data.db.ArtistDao
 import com.example.movieapp.data.db.MovieDao

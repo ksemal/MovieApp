@@ -1,4 +1,4 @@
-package com.example.movieapp.presentation.di
+package com.example.movieapp.presentation.di.core
 
 import com.example.movieapp.data.repository.artist.datasource.ArtistCacheDataSource
 import com.example.movieapp.data.repository.artist.datasourceImpl.ArtistCacheDataSourceImpl
@@ -6,9 +6,11 @@ import com.example.movieapp.data.repository.movie.datasource.MovieCacheDataSourc
 import com.example.movieapp.data.repository.movie.datasourceimpl.MovieCacheDataSourceImpl
 import com.example.movieapp.data.repository.tvshow.datasource.TvShowCacheDataSource
 import com.example.movieapp.data.repository.tvshow.datasourceImpl.TvShowCacheDataSourceImpl
+import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+@Module
 class CacheDataModule {
 
     @Singleton

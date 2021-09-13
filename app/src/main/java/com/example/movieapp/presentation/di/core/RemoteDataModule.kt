@@ -1,4 +1,4 @@
-package com.example.movieapp.presentation.di
+package com.example.movieapp.presentation.di.core
 
 import com.example.movieapp.data.api.TMDBService
 import com.example.movieapp.data.repository.artist.datasource.ArtistRemoteDataSource
