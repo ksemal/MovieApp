@@ -10,7 +10,7 @@ class ArtistViewModel(
     private val updateArtistsUseCase: UpdateArtistsUseCase
 ) : ViewModel() {
 
-    fun getTvShows() = liveData {
+    fun getArtists() = liveData {
         val artistsList = getArtistsUseCase.execute()
         emit(artistsList)
     }
