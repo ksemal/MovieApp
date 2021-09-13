@@ -49,7 +49,7 @@ class ArtistRepositoryImpl(
         if(artistList.isNotEmpty()){
             return artistList
         }else{
-            artistList=getArtistsFromDB()
+            artistList=getArtistsFromAPI()
             artistLocalDataSource.saveArtistsToDB(artistList)
         }
 
